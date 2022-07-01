@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+       <style type="text/tailwindcss">
+@layer components {
+  .hamburger div:first-child {
+    @apply rotate-45 translate-y-1.5;
+  }
+  .hamburger div:last-child {
+    @apply -rotate-45 -translate-y-1;
+  }
+}
+
+      </style>
+
+    <title>Document</title>
+  </head>
+
+  <body class="bg-white">
+    <div class="h-screen bg-gray-50">
+      <header>
+        <div class="relative z-20 border-b bg-white">
+          <div class="px-6 md:px-12 lg:container lg:mx-auto lg:px-6 lg:py-4">
+            <div class="flex items-center justify-between">
+              <div class="relative z-20">
+                <a href="#">
+                  <img
+                    src="https://homelandep.us/wp-content/uploads/2019/08/Homeland_Home_NavLogo.png"
+                    alt="https://homelandep.us/"
+                    class="w-36"
+                  />
+                </a>
+              </div>
+
+              <div class="flex items-center justify-end border-l lg:border-l-0">
+                <input
+                  type="checkbox"
+                  name="hamburger"
+                  id="hamburger"
+                  class="peer"
+                  hidden
+                />
+                <label
+                  for="hamburger"
+                  class="peer-checked:hamburger block relative z-20 p-6 -mr-6 cursor-pointer lg:hidden"
+                >
+                  <div
+                    aria-hidden="true"
+                    class="m-auto h-0.5 w-6 rounded bg-sky-900 transition duration-300"
+                  ></div>
+                  <div
+                    aria-hidden="true"
+                    class="m-auto mt-2 h-0.5 w-6 rounded bg-sky-900 transition duration-300"
+                  ></div>
+                </label>
+
+                <div
+                  class="peer-checked:translate-x-0 fixed inset-0 w-[calc(100%-4.5rem)] translate-x-[-100%] bg-white border-r shadow-xl transition duration-300 lg:border-r-0 lg:w-auto lg:static lg:shadow-none lg:translate-x-0"
+                >
+                  <div
+                    class="flex flex-col h-full justify-between lg:items-center lg:flex-row"
+                  >
+                    <ul
+                      class="px-6 pt-32 text-gray-700 space-y-8 md:px-12 lg:space-y-0 lg:flex lg:space-x-12 lg:pt-0"
+                    >
+                      <li>
+                        <a
+                          href="index.html"
+                          class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:bg-gray-200 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100"
+                        >
+                          <span class="relative text-cyan-800">Home</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://homelandep.us/client-portal/"
+                          class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-gray-200 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100"
+                        >
+                          <span class="relative group-hover:text-cyan-800"
+                            >CLIENT PORTAL</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-cyan-100 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100"
+                        >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-cyan-100 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100"
+                        >
+                        </a>
+                      </li>
+                    </ul>
+
+                    <div
+                      class="border-t py-8 px-6 md:px-12 md:py-16 lg:border-t-0 lg:border-l lg:py-0 lg:pr-0 lg:pl-6"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="relative min-h-screen">
+        <img src="https://homelandep.us/wp-content/uploads/2019/07/Homeland_Home_Humvee.png" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-blue-700 bg-opacity-80"></div>
+        <h1 class="text-white absolute w-min-scren h-full flex justify-center items-center text-xl">
+          <img
+                  src="https://homelandep.us/wp-content/uploads/2019/07/Homeland_Home_HeaderLogo1.png"
+                  alt=""
+                />
+        </h1>
+      </div>
+      <!-- serperation to websited -->
+
+      <div class="min-h-screen w-full  p-6 " style="background-image: url(https://homelandep.us/wp-content/uploads/2019/08/what-the-hex.png)">
+        <div class="mb-4 flex flex-col text-center text-xl font-bold md:mt-12 md:text-3xl">
+          <div class="text-blue-900">S E E K I N G</div>
+          <div class="text-blue-900">TEAM MEMBERS</div>
+        </div>
+      
+        <!--  Container Start -->
+      
+        <div class="flex flex-wrap justify-center">
+          <div class="m-6 flex w-full flex-col overflow-hidden rounded-lg bg-transparent sm:w-52">
+            <img src="https://homelandep.us/wp-content/uploads/2019/08/Homeland_Home_Icon_Security.png" alt="" class="m-6" />
+            <div class="text-center text-3xl underline text-blue-900  ">SECURITY</div>
+
+            <h2 class="pt-6 px-2 pb-5 text-center">• Armed Security Guards</h2>
+      
+            <h2 class="px-2 pb-5 text-center">• Armed Plain Clothes Bodyguard</h2>
+      
+            <h2 class="px-2 pb-5 text-center">• Drivers Trained in Tactical and Evasive Maneuvering</h2>
+      
+            <h2 class="px-2 pb-5 text-center">• Threat Assessor and Security Consultant</h2>
+          </div>
+      
+          <div class="m-6 flex w-full flex-col overflow-hidden rounded-lg bg-transparent sm:w-52">
+            <img src="https://homelandep.us/wp-content/uploads/2019/08/Homeland_Home_Icon_Investigation.png" alt="" class="m-6" />
+            <div class="text-center text-3xl underline text-blue-900  ">INVESTIGATION</div>
+
+            <h2 class="pt-6 px-2 pb-5 text-center">• Investigators</h2>
+      
+            <h2 class="px-2 pb-5 text-center">• Surveillance & Counter-Surveillance Personnel</h2>
+      
+            <h2 class="px-2 pb-5 text-center">• Basic Forensics and Crime Scene Preservation Instructor</h2>
+          </div>
+      
+          <div class="m-6 flex w-full flex-col overflow-hidden rounded-lg bg-transparent sm:w-52">
+            <img src="https://homelandep.us/wp-content/uploads/2019/08/Homeland_Home_Icon_Specialist.png" alt="" class="m-6" />
+
+            <div class="text-center text-3xl underline text-blue-900  ">SPECIALIST</div>
+
+
+            <h2 class="pt-6 px-2 pb-5 text-center">• EMTs</h2>
+      
+            <h2 class="px-2 pb-5 text-center">• Licensed Pilots</h2>
+      
+            <h2 class="px-2 pb-5 text-center">• SAR Teams</h2>
+      
+            <h2 class="px-2 pb-5 text-center">• Certified Divers</h2>
+      
+            <h2 class="px-2 pb-5 text-center">• K-9 Handlers</h2>
+      
+            <h2 class="px-2 pb-5 text-center">• Explosive Ordnance Disposal Technicians</h2>
+          </div>
+      
+          <div class="m-6 flex w-full flex-col overflow-hidden rounded-lg bg-transparent sm:w-52">
+            <img src="https://homelandep.us/wp-content/uploads/2019/08/Homeland_Home_Icon_Security.png" alt="" class="m-6" />
+      
+            <div class="text-center text-3xl underline text-blue-900  ">GLOBAL</div>
+
+            <h2 class="pt-6 px-2 pb-5 text-center">• Translators in Hostile Environments</h2>
+      
+            <h2 class="px-2 pb-5 text-center">• Command Center Support</h2>
+      
+            <h2 class="px-2 pb-5 text-center">• Equipment Management Personnel</h2>
+      
+            <h2 class="px-2 pb-5 text-center">• Access Control and Camera Monitoring Personnel</h2>
+      
+            <h2 class="px-2 pb-5 text-center">• On-vessel Anti-piracy personnel</h2>
+          </div>
+        </div>
+        <div class="flex justify-center"><div class="text-xs">***Active Law Enforcement Officers must have department clearance letter and retired military must have honorable discharge and provide DD-214. Former law enforcement officers must have LEOSA/HR218. Foreign assignments require current passport expiring no sooner than 6 months of date of deployment. Active DoD or State Department clearance is helpful but not needed for most overseas positions.</div></div>
+        <div class="flex  justify-center pt-3"><div class="text-2xl">Contact our recruiter to explore exciting career opportunities. We seek the best and brightest individuals to add to our global team of professionals. Securing our clients’ valuable assets is our most important mission and we accomplish that by deploying our most valuable asset – You.</div></div>
+        <div class="flex  justify-center pt-3"><div class="text-2xl">While other companies advertise their services to potential clients, we prefer to dedicate our marketing resources to recruiting the best candidates to help us serve our ever-growing list of clients. Whether you have experience in government agencies or the private sector, your unique skillsets will be highly applicable to our operations.
+        </div></div>
+          </div>
+          <div class="antialiased " style="background-image: url(https://web.archive.org/web/20220321022110im_/https://homelandep.us/wp-content/uploads/2019/08/Homeland_Contact_BG.jpg)">
+            <div class="flex h-full w-full items-center justify-center">
+              <div class=" flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 bg-blue-700 opacity-80 w-full max-w-full p-5 sm:p-8 rounded-lg shadow-lg text-white overflow-hidden">
+                <div class="flex flex-col md:flex-1 space-y-8 justify-between">
+                  <div>
+                    <h1 class="font-bold text-4xl tracking-wide">Contact Us</h1>
+                    <div class=" pt-10 flex flex-col space-y-6 sm:space-y-6">
+                    <div class="inline-flex space-x-2 items-center">
+                      <span>Email:</span>
+                      <span>Info@homelandEP.us</span>
+                    </div>
+                    <div class="flex flex-col space-y-4">
+                      <div class="inline-flex items-center space-x-4">
+                        <span>Phone:</span>
+                        <span>+1 833 7732 677</span>
+                      </div>
+                      <div class="flex flex-col space-y-4">
+                        <div class="inline-flex items-center space-x-4">
+                          <span>Phone:</span>
+                          <span> +1 833 7732 677</span>
+                        </div>
+                        <p class="pt-12">24/7 Communication Center Emergency Dispatch</p>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                  
+  
+                    <div class="rounded-xl bg-transparent p-8 relative">
+                      <form action="" class="flex flex-col space-y-4">
+                        <div>
+                          <label for="" class="text-lg font-semibold">Your Name (required)</label>
+                          <input type="text" placeholder="Your Name" class="focus: focus: mt-2 w-full rounded-md px-4 py-2 text-black outline-none ring-1 ring-2 ring-black ring-gray-600" />
+                        </div>
+          
+                        <div>
+                          <label for="" class="text-lg font-semibold">Your Email (required)</label>
+                          <input type="email" placeholder="Your Email" class="focus: focus: mt-2 w-full rounded-md px-4 py-2 text-black outline-none ring-1 ring-2 ring-black ring-gray-600" />
+                        </div>
+                        <div>
+                          <label for="" class="text-lg font-semibold">Subject</label>
+                          <textarea placeholder="" rows="1" class="focus: focus: mt-2 w-full rounded-md px-4 py-2 text-black outline-none ring-1 ring-2 ring-black ring-gray-600"></textarea>
+                        </div>
+                        <div>
+                          <label for="" class="text-lg font-semibold">Your Message</label>
+                          <textarea placeholder="" rows="4" class="focus: focus: mt-2 w-full rounded-md px-4 py-2 text-black outline-none ring-1 ring-2 ring-black ring-gray-600"></textarea>
+                        </div>
+                        <button class="inline-block self-start bg-orange-600 font-bold text-white rounded-lg px-12  py-6 uppercase text-sm">send</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          <footer class=" flex pt-14 pb-3 place-content-center ">
+            <div>
+              <p>©2020 by Homeland Executive Protection, LLC</p>
+               <p class="flex place-content-center">TX.PSB.LIC C09385201</p>
+                <p class="pl-6">Designed and Managed by The Desque</p>
+            </div>
+          </footer>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
